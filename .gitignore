@@ -24,3 +24,6 @@ hs_err_pid*
 
 # Folder
 bin/
+
+.classpath
+.project
