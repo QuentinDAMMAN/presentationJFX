@@ -10,7 +10,7 @@ public class MusicLauncher {
 		Media hit = new Media(
 				Paths.get("src\\application\\assets\\" + titre + ".mp3").toAbsolutePath().toUri().toString());
 		MediaPlayer backgroundPlayer = new MediaPlayer(hit);
-		backgroundPlayer.setVolume(0.05);
+		backgroundPlayer.setVolume(0.3);
 		backgroundPlayer.setAutoPlay(true);
 		return backgroundPlayer;
 	}
