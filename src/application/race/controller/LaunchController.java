@@ -40,6 +40,8 @@ public class LaunchController implements Initializable {
 	private Group groupStart;
 	@FXML
 	private Label erreur;
+	@FXML
+	private Button retour;
 
 	private static List<Integer> listeVitesse = new LinkedList<>();
 
@@ -78,4 +80,21 @@ public class LaunchController implements Initializable {
 	public static List<Integer> getVitesses() {
 		return listeVitesse;
 	}
+	
+	
+	public void retour(ActionEvent event) {
+		Stage stageReturn = (Stage) start.getScene().getWindow();
+		Parent rootReturn = null;
+		try {
+			rootReturn = FXMLLoader.load(getClass().getResource("/application/launcher/Launcher.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		stageReturn.setScene(new Scene(rootReturn));
+		
+		
+	}
+	
+
+	
 }
