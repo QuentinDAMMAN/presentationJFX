@@ -6,8 +6,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import application.launcher.model.ButtonsAction;
 import application.tool.MusicLauncher;
+import application.tool.Return;
+import application.tool.returnAction;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,10 +20,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
-public class LaunchController implements Initializable {
+public class LaunchController implements Initializable, returnAction {
 
 	@FXML
 	private Pane configStart;
@@ -47,15 +47,13 @@ public class LaunchController implements Initializable {
 
 	private static List<Integer> listeVitesse = new LinkedList<>();
 
-	private static MediaPlayer backgroundPlayer;
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		backgroundPlayer = MusicLauncher.music("course");
-		backgroundPlayer.play();
+		MusicLauncher.music("course");
 	}
 
 	public void startCourse(ActionEvent event) {
+		listeVitesse.removeAll(listeVitesse);
 		try {
 			listeVitesse.add(Integer.parseInt(vitesseV1.getText()));
 			listeVitesse.add(Integer.parseInt(vitesseV2.getText()));
@@ -72,7 +70,7 @@ public class LaunchController implements Initializable {
 			Stage stage = (Stage) start.getScene().getWindow();
 			Parent root = null;
 			try {
-				root = FXMLLoader.load(getClass().getResource("/application/CourseScene.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/application/race/view/CourseScene.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -83,26 +81,12 @@ public class LaunchController implements Initializable {
 	public static List<Integer> getVitesses() {
 		return listeVitesse;
 	}
-	
-	
-//	public void retour(ActionEvent event) {
-//		Stage stageReturn = (Stage) start.getScene().getWindow();
-//		Parent rootReturn = null;
-//		try {
-//			rootReturn = FXMLLoader.load(getClass().getResource("/application/launcher/Launcher.fxml"));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		stageReturn.setScene(new Scene(rootReturn));
-//		
-//	}
-	
-	public void clic(ActionEvent event) {
+
+	public void clicRetour(ActionEvent event) {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
-		ButtonsAction action = new ButtonsAction();
+		Return action = new Return();
+		MusicLauncher.stop();
 		action.exec(((Button) event.getSource()));
 	}
-	
 
-	
 }

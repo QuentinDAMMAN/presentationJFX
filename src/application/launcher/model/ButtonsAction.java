@@ -38,16 +38,7 @@ public class ButtonsAction {
 			break;
 		case "setvolume":
 			break;
-		case "retour":
-			Stage stageReturn = (Stage) button.getScene().getWindow();
-			Parent rootReturn = null;
-			try {
-				rootReturn = FXMLLoader.load(getClass().getResource("/application/launcher/Launcher.fxml"));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			stageReturn.setScene(new Scene(rootReturn));
-			break;
+
 		}
 		return;
 	}
