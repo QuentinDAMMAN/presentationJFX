@@ -61,7 +61,7 @@ public class LaunchController implements Initializable, returnAction {
 			listeVitesse.add(Integer.parseInt(vitesseV4.getText()));
 			listeVitesse.add(Integer.parseInt(vitesseV5.getText()));
 		} catch (NumberFormatException e) {
-			erreur.setText("Les vitesses doivent �tre des entiers non nulles");
+			erreur.setText("Les vitesses doivent être des entiers non nulles");
 			return;
 		}
 

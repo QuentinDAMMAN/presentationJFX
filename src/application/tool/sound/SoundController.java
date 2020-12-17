@@ -1,19 +1,18 @@
-package application.cours;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+package application.tool.sound;
 
 import application.tool.Return;
 import application.tool.returnAction;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 
-public class CoursController implements Initializable, returnAction {
+public class SoundController implements returnAction {
 
 	@FXML
 	private Button retour;
+	@FXML
+	private Slider volume;
 
 	@Override
 	public void clicRetour(ActionEvent event) {
@@ -21,11 +20,4 @@ public class CoursController implements Initializable, returnAction {
 		Return action = new Return();
 		action.exec(((Button) event.getSource()));
 	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

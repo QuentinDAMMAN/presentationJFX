@@ -5,13 +5,15 @@ import java.util.ResourceBundle;
 
 import application.launcher.model.ButtonsAction;
 import application.tool.MusicLauncher;
+import application.tool.sound.ImageClicSound;
+import application.tool.sound.ClicSound;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Slider;
+import javafx.scene.image.ImageView;
 
-public class MainController implements Initializable {
+public class MainController implements Initializable, ImageClicSound {
 	@FXML
 	private Button race;
 	@FXML
@@ -22,11 +24,8 @@ public class MainController implements Initializable {
 	private Button dragAndDrop;
 	@FXML
 	private Button cours;
-
-//	@FXML
-//	private static Slider pourcentageVolume;
-//
-//	private static double volume;
+	@FXML
+	private ImageView imageView;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -40,4 +39,12 @@ public class MainController implements Initializable {
 		action.exec(((Button) event.getSource()));
 	}
 
+
+	@Override
+	public void mouseOnImageReleased() {
+		System.out.println("Test : appuie sur l'image du son");
+		ClicSound action = new ClicSound();
+		action.exec(imageView);
+		
+	}
 }
