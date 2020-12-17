@@ -1,4 +1,4 @@
-package application.launcher.model;
+package application.tool;
 
 import java.nio.file.Paths;
 

@@ -3,7 +3,7 @@ package application.launcher;
 import java.net.URL;
 import java.util.ResourceBundle;
 import application.launcher.model.ButtonsAction;
-import application.launcher.model.MusicLauncher;
+import application.tool.MusicLauncher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -39,6 +39,7 @@ public class MainController implements Initializable {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
 		ButtonsAction action = new ButtonsAction();
 		action.exec(((Button) event.getSource()));
+		backgroundPlayer.stop();
 	}
 
 //	public static void setVolume() {

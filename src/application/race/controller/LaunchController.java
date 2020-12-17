@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import application.launcher.model.ButtonsAction;
+import application.tool.MusicLauncher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,7 +51,8 @@ public class LaunchController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
+		backgroundPlayer = MusicLauncher.music("course");
+		backgroundPlayer.play();
 	}
 
 	public void startCourse(ActionEvent event) {

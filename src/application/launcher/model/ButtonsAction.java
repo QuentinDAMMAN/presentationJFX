@@ -11,12 +11,12 @@ import javafx.stage.Stage;
 public class ButtonsAction {
 	public void exec(Button button) {
 		String buttonName = button.getText().toLowerCase();
+		Stage stage = (Stage) button.getScene().getWindow();
+		Parent root = null;
 		switch (buttonName) {
 		case "animation":
 			break;
 		case "race":
-			Stage stage = (Stage) button.getScene().getWindow();
-			Parent root = null;
 			try {
 				root = FXMLLoader.load(getClass().getResource("/application/race/view/LancementCourse.fxml"));
 			} catch (IOException e) {
@@ -24,7 +24,13 @@ public class ButtonsAction {
 			}
 			stage.setScene(new Scene(root));
 			break;
-		case "course":
+		case "cours":
+			try {
+				root = FXMLLoader.load(getClass().getResource("/application/cours/view/BaseDeSlide.fxml"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			stage.setScene(new Scene(root));
 			break;
 		case "draganddrop":
 			break;
