@@ -21,7 +21,7 @@
                   <Button fx:id="start" layoutX="98.0" layoutY="196.0" mnemonicParsing="false" onAction="#startCourse" prefHeight="10.0" prefWidth="60.0" text="Start" />
                   <Label fx:id="erreur" layoutX="34.0" layoutY="248.0" prefHeight="36.0" prefWidth="189.0" textFill="RED" wrapText="true" />
                   <Label layoutX="45.0" layoutY="31.0" text="Animation Course de voiture" />
-                  <Button fx:id="retour" layoutX="186.0" layoutY="259.0" mnemonicParsing="false" onAction="#retour" text="Retour" />
+                  <Button fx:id="retour" layoutX="186.0" layoutY="259.0" mnemonicParsing="false" onAction="#clic" text="Retour" />
                </children>
             </Pane>
          </children>

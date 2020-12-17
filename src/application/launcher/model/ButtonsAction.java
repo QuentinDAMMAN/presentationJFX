@@ -30,7 +30,9 @@ public class ButtonsAction {
 			break;
 		case "login":
 			break;
-		case "return":
+		case "setvolume":
+			break;
+		case "retour":
 			Stage stageReturn = (Stage) button.getScene().getWindow();
 			Parent rootReturn = null;
 			try {
