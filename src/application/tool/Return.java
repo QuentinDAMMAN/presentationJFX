@@ -17,6 +17,7 @@ public class Return {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		MusicLauncher.stop();
 		stageReturn.setScene(new Scene(rootReturn));
 	}
 }

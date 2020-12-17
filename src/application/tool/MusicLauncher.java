@@ -9,7 +9,7 @@ import javafx.scene.media.MediaPlayer;
  * 
  * @author Guillaume
  *
- *         Gestion de la musique sur les différents controller.
+ *         Gestion de la musique sur les diffï¿½rents controller.
  *
  */
 

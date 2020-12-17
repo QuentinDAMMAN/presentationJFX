@@ -23,10 +23,10 @@ public class MainController implements Initializable {
 	@FXML
 	private Button cours;
 
-	@FXML
-	private static Slider pourcentageVolume;
-
-	private static double volume;
+//	@FXML
+//	private static Slider pourcentageVolume;
+//
+//	private static double volume;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
