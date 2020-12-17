@@ -4,15 +4,20 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import javafx.animation.TranslateTransition;
+import application.race.model.CarAnimation;
+import application.race.model.Countdown;
+import application.tool.MusicLauncher;
+import application.tool.Return;
+import application.tool.returnAction;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
-import javafx.util.Duration;
 
-public class CourseController implements Initializable {
+public class CourseController implements Initializable, returnAction {
 	@FXML
 	private ImageView voiture1;
 	@FXML
@@ -27,40 +32,32 @@ public class CourseController implements Initializable {
 	private Line finishLine;
 	@FXML
 	private Label decompte;
-	private static List<Integer> listeVitesse = LaunchController.getVitesses();
+	@FXML
+	private Button retour;
+	private List<Integer> listeVitesse = LaunchController.getVitesses();
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		TranslateTransition trans1 = new TranslateTransition();
-		trans1.setByX(800);
-		trans1.setCycleCount(1);
-		trans1.setDuration(Duration.millis(2000 - (10 * listeVitesse.get(0))));
-		trans1.setNode(voiture1);
-		trans1.play();
-		TranslateTransition trans2 = new TranslateTransition();
-		trans2.setByX(800);
-		trans2.setCycleCount(1);
-		trans2.setDuration(Duration.millis(2000 - (10 * listeVitesse.get(1))));
-		trans2.setNode(voiture2);
-		trans2.play();
-		TranslateTransition trans3 = new TranslateTransition();
-		trans3.setByX(800);
-		trans3.setCycleCount(1);
-		trans3.setDuration(Duration.millis(2500 - (10 * listeVitesse.get(2))));
-		trans3.setNode(voiture3);
-		trans3.play();
-		TranslateTransition trans4 = new TranslateTransition();
-		trans4.setByX(800);
-		trans4.setCycleCount(1);
-		trans4.setDuration(Duration.millis(2500 - (10 * listeVitesse.get(3))));
-		trans4.setNode(voiture4);
-		trans4.play();
-		TranslateTransition trans5 = new TranslateTransition();
-		trans5.setByX(800);
-		trans5.setCycleCount(1);
-		trans5.setDuration(Duration.millis(2500 - (10 * listeVitesse.get(4))));
-		trans5.setNode(voiture5);
-		trans5.play();
+		Countdown cd = new Countdown(decompte, this);
+		cd.start();
+	}
+
+	public void startRace() {
+		CarAnimation carAnim = new CarAnimation();
+		ImageView[] cars = { voiture1, voiture2, voiture3, voiture4, voiture5 };
+		carAnim.play(this, cars, listeVitesse);
+	}
+
+	@Override
+	public void clicRetour(ActionEvent e) {
+		System.out.println("test : " + ((Button) e.getSource()).getText());
+		Return action = new Return();
+		MusicLauncher.stop();
+		action.exec(((Button) e.getSource()));
+	}
+
+	public void afficheRetour() {
+		retour.setOpacity(1);
 	}
 
 }
