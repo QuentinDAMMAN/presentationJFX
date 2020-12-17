@@ -61,11 +61,12 @@ public class LaunchController implements Initializable, returnAction {
 			listeVitesse.add(Integer.parseInt(vitesseV4.getText()));
 			listeVitesse.add(Integer.parseInt(vitesseV5.getText()));
 		} catch (NumberFormatException e) {
-			erreur.setText("Les vitesses doivent être des entiers non nulles");
+			erreur.setText("Les vitesses doivent Ãªtre des entiers non nulles");
 			return;
 		}
+
 		if (listeVitesse.stream().anyMatch(e -> e > 100)) {
-			erreur.setText("Les vitesses doivent être inférieure à 100");
+			erreur.setText("Les vitesses doivent Ãªtre infÃ©rieure Ã  100");
 		} else {
 			Stage stage = (Stage) start.getScene().getWindow();
 			Parent root = null;
@@ -85,7 +86,6 @@ public class LaunchController implements Initializable, returnAction {
 	public void clicRetour(ActionEvent event) {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
 		Return action = new Return();
-		MusicLauncher.stop();
 		action.exec(((Button) event.getSource()));
 	}
 
