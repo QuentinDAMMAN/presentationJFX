@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import application.launcher.model.ButtonsAction;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -82,17 +83,22 @@ public class LaunchController implements Initializable {
 	}
 	
 	
-	public void retour(ActionEvent event) {
-		Stage stageReturn = (Stage) start.getScene().getWindow();
-		Parent rootReturn = null;
-		try {
-			rootReturn = FXMLLoader.load(getClass().getResource("/application/launcher/Launcher.fxml"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		stageReturn.setScene(new Scene(rootReturn));
-		
-		
+//	public void retour(ActionEvent event) {
+//		Stage stageReturn = (Stage) start.getScene().getWindow();
+//		Parent rootReturn = null;
+//		try {
+//			rootReturn = FXMLLoader.load(getClass().getResource("/application/launcher/Launcher.fxml"));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		stageReturn.setScene(new Scene(rootReturn));
+//		
+//	}
+	
+	public void clic(ActionEvent event) {
+		System.out.println("test : " + ((Button) event.getSource()).getText());
+		ButtonsAction action = new ButtonsAction();
+		action.exec(((Button) event.getSource()));
 	}
 	
 
