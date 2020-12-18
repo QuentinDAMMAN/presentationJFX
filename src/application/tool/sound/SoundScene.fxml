@@ -21,7 +21,7 @@
 				</Label>
       <HBox layoutX="10.0" layoutY="77.0" prefHeight="44.0" prefWidth="370.0" spacing="20.0">
          <children>
-				<Slider fx:id="vSliderVolume" minorTickCount="10" onMouseDragged="#onSliderChanged" prefHeight="158.0" prefWidth="280.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+				<Slider fx:id="vSliderVolume" minorTickCount="10" onMouseDragged="#onSliderChanged" onMousePressed="#onSliderChanged" onMouseReleased="#onSliderChanged" prefHeight="158.0" prefWidth="280.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
             <Label fx:id="vValeurVolume" />
          </children>
       </HBox>
