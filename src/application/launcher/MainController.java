@@ -2,10 +2,9 @@ package application.launcher;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import application.launcher.model.ButtonsAction;
-import application.tool.MusicLauncher;
 import application.tool.sound.ImageClicSound;
+import application.tool.sound.MusicLauncher;
 import application.tool.sound.ClicSound;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,12 +38,11 @@ public class MainController implements Initializable, ImageClicSound {
 		action.exec(((Button) event.getSource()));
 	}
 
-
 	@Override
 	public void mouseOnImageReleased() {
 		System.out.println("Test : appuie sur l'image du son");
 		ClicSound action = new ClicSound();
+		MusicLauncher.stop();
 		action.exec(imageView);
-		
 	}
 }

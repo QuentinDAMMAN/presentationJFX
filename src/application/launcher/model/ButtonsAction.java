@@ -36,9 +36,6 @@ public class ButtonsAction {
 			break;
 		case "login":
 			break;
-		case "volume":
-			break;
-			
 
 		}
 		return;
