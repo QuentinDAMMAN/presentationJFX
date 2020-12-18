@@ -6,9 +6,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import application.tool.MusicLauncher;
 import application.tool.Return;
 import application.tool.returnAction;
+import application.tool.sound.MusicLauncher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -86,6 +86,7 @@ public class LaunchController implements Initializable, returnAction {
 	public void clicRetour(ActionEvent event) {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
 		Return action = new Return();
+		MusicLauncher.stop();
 		action.exec(((Button) event.getSource()));
 	}
 
