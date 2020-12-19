@@ -1,4 +1,4 @@
-package application.launcher.model;
+package application.animation;
 
 import java.io.IOException;
 
@@ -8,15 +8,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class ButtonsAction {
+public class ActionAnimation {
 	public void exec(Button button) {
 		String buttonName = button.getText().toLowerCase();
 		Stage stage = (Stage) button.getScene().getWindow();
 		Parent root = null;
 		switch (buttonName) {
-		case "animation":
+		case "circular":
 			try {
-				root = FXMLLoader.load(getClass().getResource("/application/animation/AnimationIntro.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/application/circular/Circular.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -29,18 +29,6 @@ public class ButtonsAction {
 				e.printStackTrace();
 			}
 			stage.setScene(new Scene(root));
-			break;
-		case "cours":
-			try {
-				root = FXMLLoader.load(getClass().getResource("/application/cours/view/BaseDeSlide.fxml"));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			stage.setScene(new Scene(root));
-			break;
-		case "draganddrop":
-			break;
-		case "login":
 			break;
 
 		}
