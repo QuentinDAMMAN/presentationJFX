@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.circular.CircularController">
-   <children>
-      <Circle fx:id="c1" fill="#1f93ff00" layoutX="300.0" layoutY="219.0" radius="133.0" stroke="#00f2ff" strokeType="INSIDE" strokeWidth="15.0" style="-fx-stroke-dash-array: 50;" />
-      <Circle fx:id="c2" fill="#1f93ff00" layoutX="300.0" layoutY="219.0" radius="92.0" stroke="#ff009a" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 60;" />
-      <Circle fx:id="c3" fill="#1f93ff00" layoutX="300.0" layoutY="219.0" radius="54.0" stroke="#9cff00" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 60;" />
-      <Button fx:id="play" layoutX="225.0" layoutY="397.0" mnemonicParsing="false" onAction="#play" prefHeight="59.0" prefWidth="151.0" text="Play" />
-      <Button fx:id="retour" layoutX="534.0" layoutY="456.0" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
-   </children>
+<AnchorPane prefHeight="332.0" prefWidth="389.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.tool.sound.SoundController">
+	<children>
+				<Button fx:id="retour" layoutX="323.0" layoutY="292.0" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
+				<Label layoutX="176.0" layoutY="14.0" text="Son">
+					<font>
+						<Font size="24.0" />
+					</font>
+					<effect>
+						<Reflection />
+					</effect>
+				</Label>
+      <HBox layoutX="10.0" layoutY="77.0" prefHeight="44.0" prefWidth="370.0" spacing="20.0">
+         <children>
+				<Slider fx:id="vSliderVolume" minorTickCount="10" onMouseDragged="#onSliderChanged" onMousePressed="#onSliderChanged" onMouseReleased="#onSliderChanged" prefHeight="158.0" prefWidth="280.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+            <Label fx:id="vValeurVolume" />
+         </children>
+      </HBox>
+	</children>
 </AnchorPane>
