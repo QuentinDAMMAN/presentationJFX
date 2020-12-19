@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.animation.AnimationController">
+   <children>
+      <Button fx:id="retour" layoutX="334.0" layoutY="361.0" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
+      <Button fx:id="race" layoutX="47.0" layoutY="78.0" mnemonicParsing="false" onAction="#clic" text="Race" />
+      <Button fx:id="circular" layoutX="47.0" layoutY="126.0" mnemonicParsing="false" onAction="#clic" text="Circular" />
+   </children>
+</AnchorPane>

@@ -4,10 +4,11 @@ import javafx.event.ActionEvent;
 
 /**
  * 
- * @author Guillaume Action du retour a implémenter sur les controller en ayant
+ * @author Guillaume Action du retour a implï¿½menter sur les controller en ayant
  *         besoin
  */
 
+@FunctionalInterface
 public interface returnAction {
 	public void clicRetour(ActionEvent e);
 }
