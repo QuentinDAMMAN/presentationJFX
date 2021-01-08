@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.CoursController">
+<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.IntroController">
 
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
@@ -22,28 +19,21 @@
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="676.0" minHeight="10.0" prefHeight="206.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="538.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="86.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="187.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="246.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="322.0" minHeight="0.0" prefHeight="67.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Button fx:id="suivant" accessibleText="MVC.fxml" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Label text="Nom du Slide" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+      <Button fx:id="suivant" accessibleText="MVC.fxml" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <Label text="Introduction" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="354.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <image>
-            <Image url="@../../assets/SlideType.png" />
-         </image>
-      </ImageView>
-      <TextArea prefHeight="200.0" prefWidth="200.0" text="blabla cours&#10;blabla" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Label text="DEMO" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="50.0" />
-         </GridPane.margin>
-      </Label>
-      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
+      <TextArea fx:id="text1" editable="false" prefHeight="501.0" prefWidth="534.0" text="JAVAFX est un framework et une bibliotheque d'interface utilisateur. Depuis la JDK 11 javafx est devenu une API indépendante qui dont le developpement suit en parallele celui de la JDK. Il est le sucesseur de SWING et AWT depuis 2014" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+      <TextArea fx:id="text2" editable="false" prefHeight="501.0" prefWidth="534.0" text="Javafx est composé de 7 modules principaux : &#10;- javafx.base: Définit l'API de base&#10;- javafx.controls: Définit la majorité des composants graphiques de l'API&#10;- javafx.fxml: Définit l'API relative au langage FXML qui permet de décrire une interface utilisateur d'une manière alternative à l'écriture de lignes de code &#10;- javafx.graphics: Définit l'API relative aux conteneurs, animations, effets visuels, formes 2D et 3D, images, impression, fenêtres, événements, robots, au support du CSS et à l'application&#10;- javafx.media: Définit l'API dédié à la lecture de contenu audio et vidéo&#10;- javafx.swing: Définit l'API qui fournit le support d’interopérabilité entre JavaFX et Swing&#10;- javafx.web: Définit l'API dédié à l'affichage de contenu web (notamment un éditeur HTML et un moteur de rendu de pages web basé sur WebKit)" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+      <Button fx:id="retour" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#clicRetour" text="Retour" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <TextArea fx:id="text3" editable="false" prefHeight="501.0" prefWidth="534.0" text="Chaque module peut être chargé indépendement et exporter par la suite afin de n'avoir que les composants nécessaires et éviter les superflus. " wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
    </children>
 </GridPane>
