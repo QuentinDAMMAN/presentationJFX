@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
 public class MVCSlideController implements Initializable {
@@ -45,9 +46,10 @@ public class MVCSlideController implements Initializable {
 		text.setVisible(false);
 		show.setVisible(false);
 		codeEclipse.setVisible(false);
+		state = StateSlide.UN;
 	}
 
-	public void avancementSlide(ActionEvent event) {
+	public void avancementSlide(MouseEvent event) {
 		switch (state) {
 		case UN:
 			vbox.setVisible(true);
@@ -67,7 +69,7 @@ public class MVCSlideController implements Initializable {
 	}
 
 	public void showImageEclipse(ActionEvent event) {
-
+		codeEclipse.setVisible(true);
 	}
 
 	public void changeSlide(ActionEvent event) {

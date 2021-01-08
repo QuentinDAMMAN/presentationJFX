@@ -1,8 +1,5 @@
 package application.cours.controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import application.cours.model.ButtonsAction;
 import application.tool.Return;
 import application.tool.returnAction;
@@ -10,8 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
-public class CoursController implements Initializable, returnAction {
+public abstract class Controller implements Initializable, returnAction {
 
 	@FXML
 	private Button retour;
@@ -20,13 +18,14 @@ public class CoursController implements Initializable, returnAction {
 	@FXML
 	private Button previous;
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
+	protected enum StateSlide {
+		UN, DEUX, TROIS, QUATRE;
 	}
 
-	@Override
+	StateSlide state = StateSlide.UN;
+
+	public abstract void avancementSlide(MouseEvent event);
+
 	public void clicRetour(ActionEvent event) {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
 		Return action = new Return();
