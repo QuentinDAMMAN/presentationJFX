@@ -40,7 +40,7 @@ public class SoundController implements returnAction, Initializable {
 		String valueSoundString = f.format(valueSound);
 
 		System.out.println("Test : " + valueSoundString);
-		vValeurVolume.setText((int) vSliderVolume.getValue()+" %");
+		vValeurVolume.setText((int) vSliderVolume.getValue() + " %");
 		MusicLauncher.setVolume(valueSound);
 	}
 

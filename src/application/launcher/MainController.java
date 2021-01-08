@@ -31,6 +31,7 @@ public class MainController implements Initializable, ImageClicSound {
 		MusicLauncher.music("elevatorMusic");
 	}
 
+	@FXML
 	public void clic(ActionEvent event) {
 		System.out.println("test : " + ((Button) event.getSource()).getText());
 		ButtonsAction action = new ButtonsAction();
