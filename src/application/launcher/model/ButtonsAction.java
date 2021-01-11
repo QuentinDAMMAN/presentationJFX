@@ -32,7 +32,7 @@ public class ButtonsAction {
 			break;
 		case "cours":
 			try {
-				root = FXMLLoader.load(getClass().getResource("/application/cours/view/BaseDeSlide.fxml"));
+				root = FXMLLoader.load(getClass().getResource("/application/cours/view/Intro.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
