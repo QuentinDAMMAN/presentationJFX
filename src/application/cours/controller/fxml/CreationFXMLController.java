@@ -1,0 +1,80 @@
+package application.cours.controller.fxml;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.cours.controller.Controller;
+import application.cours.model.ButtonsAction;
+import application.tool.Return;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+
+public class CreationFXMLController extends Controller implements Initializable{
+
+	@FXML
+	private ImageView image1;
+	@FXML
+	private ImageView image2;
+	@FXML
+	private ImageView image3;
+	@FXML
+	private ImageView image4;
+	@FXML
+	private Button precedent;
+	@FXML
+	private Button suivant;
+	@FXML
+	private Button retour;
+
+	private enum StateSlide {
+		UN, DEUX, TROIS, QUATRE;
+	}
+
+	StateSlide state = StateSlide.UN;
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		image1.setVisible(false);
+		image2.setVisible(false);
+		image3.setVisible(false);
+		image4.setVisible(false);
+		state = StateSlide.UN;
+	}
+
+	public void avancementSlide(MouseEvent event) {
+		switch (state) {
+		case UN:
+			image1.setVisible(true);
+			state = StateSlide.DEUX;
+			break;
+		case DEUX:
+			image2.setVisible(true);
+			state = StateSlide.TROIS;
+			break;
+		case TROIS:
+			image3.setVisible(true);
+			state = StateSlide.QUATRE;
+			break;
+		case QUATRE:
+			image4.setVisible(true);
+			break;
+		}
+	}
+
+	public void changeSlide(ActionEvent event) {
+		System.out.println(((Button) event.getSource()).getAccessibleText());
+		ButtonsAction action = new ButtonsAction();
+		action.exec(((Button) event.getSource()));
+	}
+
+	public void clicRetour(ActionEvent event) {
+		System.out.println("test : " + ((Button) event.getSource()).getText());
+		Return action = new Return();
+		action.exec(((Button) event.getSource()));
+	}
+
+}
