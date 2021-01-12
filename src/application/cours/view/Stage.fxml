@@ -31,7 +31,7 @@
             <Insets left="75.0" />
          </GridPane.margin></Button>
       <Button fx:id="next" accessibleText="Scene" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Label text="Nom du Slide" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+      <Label text="Stage" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
