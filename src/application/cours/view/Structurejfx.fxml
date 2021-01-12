@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.StructureJFXController">
+<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.StructureJFXController">
 
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
@@ -23,33 +24,52 @@
   <rowConstraints>
     <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="538.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="538.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="previous" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <Button fx:id="previous" accessibleText="MVC" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets left="75.0" />
          </GridPane.margin></Button>
-      <Button fx:id="next" accessibleText="MVC" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      <Label text="Nom du Slide" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+      <Button fx:id="next" accessibleText="Stage" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label text="Structure JFX" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="354.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <image>
-            <Image url="@../../assets/SlideType.png" />
-         </image>
-      </ImageView>
-      <TextArea prefHeight="200.0" prefWidth="200.0" text="blabla cours&#10;blabla" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Label text="DEMO" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-         <GridPane.margin>
-            <Insets top="50.0" />
-         </GridPane.margin>
-      </Label>
-      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.rowIndex="2">
+      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.rowIndex="3">
          <GridPane.margin>
             <Insets left="25.0" />
          </GridPane.margin></Button>
+      <ImageView fx:id="graph" fitHeight="356.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="40.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <image>
+            <Image url="@../../assets/jfxTree.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="text1" strokeType="OUTSIDE" strokeWidth="0.0" text="Les scenes JFX sont un peu constitutées comme un arbre généalogique avec des branches et leur parents" wrappingWidth="604.990234375" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Group fx:id="text2" translateX="100.0" translateY="20.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="2">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0 - la base c'est la Window c'est la ou se déroule l'application" wrappingWidth="442.626953125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 et 2 ce sont des Scene qui peuvent apparaitre séparement ou en même temps (un pop up par exemple !)" wrappingWidth="453.626953125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3 et + ce sont les Node, c'est tous les élements de notre scène, les boutons, le texte, les images, etc.." wrappingWidth="445.626953125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
    </children>
 </GridPane>

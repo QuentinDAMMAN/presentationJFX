@@ -4,6 +4,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.scene.Group;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
@@ -12,15 +14,15 @@ public class StructureJFXController extends Controller {
 	@FXML
 	private Text text1;
 	@FXML
-	private Text text2;
+	private Group text2;
 	@FXML
-	private Text text3;
+	private ImageView graph;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		text1.setVisible(false);
 		text2.setVisible(false);
-		text3.setVisible(false);
+		graph.setVisible(false);
 		state = StateSlide.UN;
 	}
 
@@ -32,11 +34,11 @@ public class StructureJFXController extends Controller {
 			state = StateSlide.DEUX;
 			break;
 		case DEUX:
-			text2.setVisible(true);
+			graph.setVisible(true);
 			state = StateSlide.TROIS;
 			break;
 		case TROIS:
-			text3.setVisible(true);
+			text2.setVisible(true);
 			break;
 		case QUATRE:
 			break;

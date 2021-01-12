@@ -35,7 +35,7 @@
          <GridPane.margin>
             <Insets left="75.0" />
          </GridPane.margin></Button>
-      <Button fx:id="next" accessibleText="MVC" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="next" accessibleText="StructureJFX" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Label text="Timeline" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />

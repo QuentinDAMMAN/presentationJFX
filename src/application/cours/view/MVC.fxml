@@ -29,7 +29,7 @@
     <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="suivant" accessibleText="Animation" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button fx:id="suivant" accessibleText="Structurejfx" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <Label prefHeight="53.0" prefWidth="391.0" text="JAVAFX : MVC intuitif" GridPane.columnSpan="5" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
@@ -56,7 +56,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
          <children>
             <Button fx:id="retour" alignment="CENTER" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
-            <Button fx:id="precedent" accessibleText="BaseDeSlide" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
+            <Button fx:id="precedent" accessibleText="Intro" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
          </children>
          <opaqueInsets>
             <Insets />
