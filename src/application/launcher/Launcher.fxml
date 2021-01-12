@@ -19,35 +19,20 @@
             <Reflection />
          </effect>
       </Label>
-      <HBox alignment="CENTER" layoutY="200.0" prefHeight="112.0" prefWidth="600.0" spacing="50.0">
+      <HBox alignment="CENTER" layoutY="144.0" prefHeight="112.0" prefWidth="600.0" spacing="50.0">
          <children>
-            <Button fx:id="dragAndDrop" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clic" text="Drag and Drop" textAlignment="CENTER" HBox.hgrow="NEVER">
+            <Button fx:id="cours" mnemonicParsing="false" onAction="#clic" text="Cours">
                <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
-            <Button fx:id="race" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clic" text="Race" textAlignment="CENTER" HBox.hgrow="NEVER">
+            <Button fx:id="animation" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clic" text="Animation" textAlignment="CENTER">
                <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="login" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clic" text="Login" textAlignment="CENTER" HBox.hgrow="NEVER">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button fx:id="animation" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#clic" text="Animation" textAlignment="CENTER" HBox.hgrow="NEVER">
-               <font>
-                  <Font size="18.0" />
+                  <Font size="24.0" />
                </font>
             </Button>
          </children>
       </HBox>
-      <Button fx:id="cours" layoutX="253.0" layoutY="117.0" mnemonicParsing="false" onAction="#clic" text="Cours">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
       <ImageView fx:id="imageView" fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseReleased="#mouseOnImageReleased" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/volume48_px.png" />

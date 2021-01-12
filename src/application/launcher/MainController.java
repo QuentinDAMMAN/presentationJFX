@@ -2,10 +2,11 @@ package application.launcher;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import application.launcher.model.ButtonsAction;
+import application.tool.sound.ClicSound;
 import application.tool.sound.ImageClicSound;
 import application.tool.sound.MusicLauncher;
-import application.tool.sound.ClicSound;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,14 +14,9 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
 public class MainController implements Initializable, ImageClicSound {
-	@FXML
-	private Button race;
-	@FXML
-	private Button login;
+
 	@FXML
 	private Button animation;
-	@FXML
-	private Button dragAndDrop;
 	@FXML
 	private Button cours;
 	@FXML

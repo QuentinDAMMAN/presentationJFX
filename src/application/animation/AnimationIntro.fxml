@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.animation.AnimationController">
+
+<VBox alignment="CENTER" prefHeight="401.0" prefWidth="211.0" spacing="50.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.animation.AnimationController">
    <children>
-      <Button fx:id="retour" layoutX="334.0" layoutY="361.0" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
-      <Button fx:id="race" layoutX="47.0" layoutY="78.0" mnemonicParsing="false" onAction="#clic" text="Race" />
-      <Button fx:id="circular" layoutX="47.0" layoutY="126.0" mnemonicParsing="false" onAction="#clic" text="Circular" />
+      <Label text="Animation JavaFx" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="race" mnemonicParsing="false" onAction="#clic" text="Race">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="circular" mnemonicParsing="false" onAction="#clic" text="Circular">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" text="Retour" translateY="50.0" />
    </children>
-</AnchorPane>
+</VBox>
