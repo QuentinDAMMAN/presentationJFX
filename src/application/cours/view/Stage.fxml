@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.StageController">
+
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="204.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="224.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="245.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="538.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="previous" accessibleText="Structurejfx" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="75.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="next" accessibleText="Scene" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label text="Nom du Slide" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="25.0" />
+         </GridPane.margin></Button>
+      <Text fx:id="text1" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Stages en javaFX correspondent aux fenetres de notre programme dans lequel il sera projeté une scene et son contenu" wrappingWidth="937.2734375" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="text2" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorsque l'on créé un nouveau projet jfx, le main initialise toujours un Stage dans la fonction principale start(). On peut récupérer et utiliser ce &quot;primaryStage&quot; dans notre programme pour changer la Scene" translateY="-130.0" wrappingWidth="937.2734375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="img1" fitHeight="202.0" fitWidth="456.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <image>
+            <Image url="@../../assets/Stage1.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="text3" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour qu'un élément qui n'est pas présent dans la Scene en cours soit visible il faut l'ajouter au Stage" translateY="110.0" wrappingWidth="937.2734375" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="img2" fitHeight="202.0" fitWidth="456.0" pickOnBounds="true" preserveRatio="true" translateY="-60.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <image>
+            <Image url="@../../assets/Stage2.png" />
+         </image>
+      </ImageView>
+   </children>
+</GridPane>

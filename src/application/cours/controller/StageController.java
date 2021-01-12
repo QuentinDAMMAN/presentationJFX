@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 
-public class SceneController extends Controller {
+public class StageController extends Controller {
 
 	@FXML
 	private Text text1;
@@ -18,6 +18,8 @@ public class SceneController extends Controller {
 	private Text text3;
 	@FXML
 	private ImageView img1;
+	@FXML
+	private ImageView img2;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -25,6 +27,7 @@ public class SceneController extends Controller {
 		text2.setVisible(false);
 		text3.setVisible(false);
 		img1.setVisible(false);
+		img2.setVisible(false);
 		state = StateSlide.UN;
 	}
 
@@ -36,16 +39,17 @@ public class SceneController extends Controller {
 			state = StateSlide.DEUX;
 			break;
 		case DEUX:
+			img1.setVisible(true);
 			text2.setVisible(true);
 			state = StateSlide.TROIS;
 			break;
 		case TROIS:
+			img2.setVisible(true);
 			text3.setVisible(true);
-			state = StateSlide.QUATRE;
 			break;
-		case QUATRE:
-			img1.setVisible(true);
+		default:
 			break;
 		}
 	}
+
 }
