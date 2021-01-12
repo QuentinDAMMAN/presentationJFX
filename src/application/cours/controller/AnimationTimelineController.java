@@ -9,7 +9,7 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.Group;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
@@ -20,17 +20,23 @@ public class AnimationTimelineController extends Controller {
 	@FXML
 	private TextArea text1;
 	@FXML
-	private TextArea text2;
-	@FXML
 	private Circle circle;
 	@FXML
-	private Button play;
+	private Group group1;
+	@FXML
+	private Group group2;
+	@FXML
+	private Group group3;
+	@FXML
+	private TextArea text;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-//		text1.setVisible(false);
-//		text2.setVisible(false);
-//		text3.setVisible(false);
+		group1.setVisible(false);
+		group2.setVisible(false);
+		group3.setVisible(false);
+		circle.setVisible(false);
+		text.setVisible(false);
 		state = StateSlide.UN;
 	}
 
@@ -39,13 +45,19 @@ public class AnimationTimelineController extends Controller {
 		switch (state) {
 		case UN:
 			state = StateSlide.DEUX;
+			text.setVisible(true);
 			break;
 		case DEUX:
+			group1.setVisible(true);
+			circle.setVisible(true);
 			state = StateSlide.TROIS;
 			break;
 		case TROIS:
+			group2.setVisible(true);
+			state = StateSlide.QUATRE;
 			break;
 		case QUATRE:
+			group3.setVisible(true);
 			break;
 		}
 	}

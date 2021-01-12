@@ -23,13 +23,13 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="676.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="311.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="269.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="86.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="suivant" accessibleText="Animation" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button fx:id="suivant" accessibleText="Structurejfx" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <Label prefHeight="53.0" prefWidth="391.0" text="JAVAFX : MVC intuitif" GridPane.columnSpan="5" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
@@ -55,8 +55,8 @@
       </VBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="3">
          <children>
-            <Button fx:id="precedent" accessibleText="BaseDeSlide" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
             <Button fx:id="retour" alignment="CENTER" mnemonicParsing="false" onAction="#clicRetour" text="Retour" />
+            <Button fx:id="precedent" accessibleText="Intro" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
          </children>
          <opaqueInsets>
             <Insets />

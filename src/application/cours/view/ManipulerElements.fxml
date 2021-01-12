@@ -21,9 +21,9 @@
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
   </columnConstraints>
   <rowConstraints>
-    <RowConstraints maxHeight="676.0" minHeight="10.0" prefHeight="206.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
     <RowConstraints maxHeight="810.0" minHeight="10.0" prefHeight="538.0" vgrow="SOMETIMES" />
-    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="86.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
       <Button fx:id="previous" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="2">
