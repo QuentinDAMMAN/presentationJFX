@@ -1,19 +1,17 @@
-package application.cours.controller.fxml;
+package application.cours.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.cours.controller.Controller;
 import application.cours.model.ButtonsAction;
 import application.tool.Return;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class CreationFXMLController extends Controller implements Initializable{
+public class TailleFenetreFXMLController extends Controller{
 
 	@FXML
 	private ImageView image1;
@@ -30,11 +28,6 @@ public class CreationFXMLController extends Controller implements Initializable{
 	@FXML
 	private Button retour;
 
-	private enum StateSlide {
-		UN, DEUX, TROIS, QUATRE;
-	}
-
-	StateSlide state = StateSlide.UN;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -52,14 +45,20 @@ public class CreationFXMLController extends Controller implements Initializable{
 			state = StateSlide.DEUX;
 			break;
 		case DEUX:
+			image1.setVisible(false);
 			image2.setVisible(true);
 			state = StateSlide.TROIS;
 			break;
 		case TROIS:
+			image1.setVisible(false);
+			image2.setVisible(false);
 			image3.setVisible(true);
 			state = StateSlide.QUATRE;
 			break;
 		case QUATRE:
+			image1.setVisible(false);
+			image2.setVisible(false);
+			image3.setVisible(false);
 			image4.setVisible(true);
 			break;
 		}

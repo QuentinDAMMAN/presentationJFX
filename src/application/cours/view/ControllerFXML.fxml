@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.fxml.CreationFXMLController">
+<GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.ControllerFXMLController">
 
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="0.0" prefWidth="15.0" />
@@ -47,17 +47,17 @@
             <Insets left="25.0" />
          </GridPane.margin>
       </Button>
-      <ImageView fitHeight="507.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+      <ImageView fx:id="image1" fitHeight="507.0" fitWidth="452.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <image>
             <Image url="@../../assets/Fxml/controller/image1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="272.0" fitWidth="595.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+      <ImageView fx:id="image2" fitHeight="272.0" fitWidth="595.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <image>
             <Image url="@../../assets/Fxml/controller/image2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="68.0" fitWidth="490.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+      <ImageView fx:id="image3" fitHeight="68.0" fitWidth="490.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
          <image>
             <Image url="@../../assets/Fxml/controller/image3.png" />
          </image>
