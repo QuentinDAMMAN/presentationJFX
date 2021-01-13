@@ -45,13 +45,13 @@ public class AnimationSimpleController extends Controller {
 			state = StateSlide.DEUX;
 			break;
 		case DEUX:
-			btn1.setVisible(false);
-			img1.setVisible(false);
+			btn1.setVisible(true);
+			img1.setVisible(true);
 			state = StateSlide.TROIS;
 			break;
 		case TROIS:
-			btn2.setVisible(false);
-			img2.setVisible(false);
+			btn2.setVisible(true);
+			img2.setVisible(true);
 			break;
 		case QUATRE:
 			break;
