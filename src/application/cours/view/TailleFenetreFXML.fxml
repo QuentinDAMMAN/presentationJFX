@@ -1,68 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.TailleFenetreFXMLController">
 
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="0.0" prefWidth="15.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="175.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="107.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="0.0" prefWidth="624.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="139.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="186.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="230.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="0.0" prefWidth="504.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="234.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
   </columnConstraints>
   <rowConstraints>
-      <RowConstraints maxHeight="676.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="676.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES" />
-      <RowConstraints maxHeight="810.0" minHeight="0.0" prefHeight="140.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="676.0" minHeight="0.0" prefHeight="177.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="810.0" minHeight="0.0" prefHeight="107.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="810.0" minHeight="0.0" prefHeight="243.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="precedent" accessibleText="AfficherFenetreFXML" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets left="75.0" />
-         </GridPane.margin>
-      </Button>
-      <Button fx:id="suivant" accessibleText="ControllerFXML" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" prefHeight="25.0" prefWidth="71.0" text="Suivant" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-      <Label prefHeight="55.0" prefWidth="847.0" text="Changer la taille de la fenêtre" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets left="25.0" />
-         </GridPane.margin>
-      </Button>
-      <ImageView fx:id="image1" fitHeight="147.0" fitWidth="467.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <Button fx:id="suivant" accessibleText="ControllerFXML" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" prefHeight="25.0" prefWidth="71.0" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+      <ImageView fx:id="image1" fitHeight="147.0" fitWidth="467.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@../../assets/Fxml/taille/image1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image2" fitHeight="438.0" fitWidth="428.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <ImageView fx:id="image2" fitHeight="438.0" fitWidth="428.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@../../assets/Fxml/taille/image2.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image3" fitHeight="448.0" fitWidth="813.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <ImageView fx:id="image3" fitHeight="448.0" fitWidth="813.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@../../assets/Fxml/taille/image3.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image4" fitHeight="103.0" fitWidth="571.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+      <ImageView fx:id="image4" fitHeight="103.0" fitWidth="571.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@../../assets/Fxml/taille/image4.png" />
          </image>
       </ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="4">
+         <children>
+            <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" />
+            <Button fx:id="precedent" accessibleText="AfficherFenetreFXML" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
+         </children>
+      </HBox>
+      <Label text="Changer la taille de la fenêtre" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
    </children>
 </GridPane>

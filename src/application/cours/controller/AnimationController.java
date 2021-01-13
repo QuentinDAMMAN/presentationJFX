@@ -7,20 +7,20 @@ import application.cours.model.ButtonsAction;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 public class AnimationController extends Controller {
 
 	@FXML
-	private TextArea text1;
+	private Text text1;
 	@FXML
-	private TextArea text2;
+	private Text text2;
 	@FXML
-	private TextArea text3;
+	private Text text3;
 	@FXML
-	private TextArea text4;
+	private Text text4;
 	@FXML
 	private ImageView img1;
 	@FXML

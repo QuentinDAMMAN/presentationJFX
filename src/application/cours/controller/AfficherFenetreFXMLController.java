@@ -3,15 +3,12 @@ package application.cours.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.cours.model.ButtonsAction;
-import application.tool.Return;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
-public class AfficherFenetreFXMLController extends Controller{
+public class AfficherFenetreFXMLController extends Controller {
 
 	@FXML
 	private ImageView image1;
@@ -23,7 +20,6 @@ public class AfficherFenetreFXMLController extends Controller{
 	private Button suivant;
 	@FXML
 	private Button retour;
-
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -48,18 +44,6 @@ public class AfficherFenetreFXMLController extends Controller{
 		case QUATRE:
 			break;
 		}
-	}
-
-	public void changeSlide(ActionEvent event) {
-		System.out.println(((Button) event.getSource()).getAccessibleText());
-		ButtonsAction action = new ButtonsAction();
-		action.exec(((Button) event.getSource()));
-	}
-
-	public void clicRetour(ActionEvent event) {
-		System.out.println("test : " + ((Button) event.getSource()).getText());
-		Return action = new Return();
-		action.exec(((Button) event.getSource()));
 	}
 
 }

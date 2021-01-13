@@ -1,39 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.CreationFXMLController">
 
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="0.0" prefWidth="15.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="206.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="0.0" prefWidth="602.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="333.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="121.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="198.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="0.0" prefWidth="677.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="167.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
   </columnConstraints>
   <rowConstraints>
-      <RowConstraints maxHeight="676.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="676.0" minHeight="0.0" prefHeight="200.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="810.0" minHeight="0.0" prefHeight="94.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="810.0" minHeight="0.0" prefHeight="301.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="precedent" accessibleText="Animation" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets left="75.0" />
-         </GridPane.margin>
-      </Button>
       <Button fx:id="suivant" accessibleText="AfficherFenetreFXML" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-      <Label prefHeight="55.0" prefWidth="549.0" text="Création d'un fichier FXML" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+      <Label prefHeight="55.0" prefWidth="427.0" text="Création d'un fichier FXML" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
@@ -48,11 +43,6 @@
             <Image url="@../../assets/Fxml/creation/Image1.png" />
          </image>
       </ImageView>
-      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <GridPane.margin>
-            <Insets left="25.0" />
-         </GridPane.margin>
-      </Button>
       <ImageView fx:id="image2" fitHeight="483.0" fitWidth="701.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <image>
             <Image url="@../../assets/Fxml/creation/Image2.png" />
@@ -63,5 +53,11 @@
             <Image url="@../../assets/Fxml/creation/Image3.png" />
          </image>
       </ImageView>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+         <children>
+            <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" />
+            <Button fx:id="precedent" accessibleText="MVC" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
+         </children>
+      </HBox>
    </children>
 </GridPane>

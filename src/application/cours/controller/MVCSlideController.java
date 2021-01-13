@@ -7,29 +7,21 @@ import application.cours.model.ButtonsAction;
 import application.tool.Return;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
-public class MVCSlideController implements Initializable {
+public class MVCSlideController extends Controller {
 
 	@FXML
 	private VBox vbox;
 	@FXML
 	private ImageView imgHbox;
 	@FXML
-	private TextArea text;
+	private VBox text;
 	@FXML
 	private Button show;
-	@FXML
-	private Button suivant;
-	@FXML
-	private Button precedent;
-	@FXML
-	private Button retour;
 	@FXML
 	private ImageView codeEclipse;
 

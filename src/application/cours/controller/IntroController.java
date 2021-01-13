@@ -4,17 +4,18 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 public class IntroController extends Controller {
 
 	@FXML
-	private TextArea text1;
+	private Text text1;
 	@FXML
-	private TextArea text2;
+	private VBox text2;
 	@FXML
-	private TextArea text3;
+	private Text text3;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
