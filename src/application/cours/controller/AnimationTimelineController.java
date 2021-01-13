@@ -10,15 +10,15 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
-import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class AnimationTimelineController extends Controller {
 
 	@FXML
-	private TextArea text1;
+	private Text text1;
 	@FXML
 	private Circle circle;
 	@FXML
@@ -27,16 +27,14 @@ public class AnimationTimelineController extends Controller {
 	private Group group2;
 	@FXML
 	private Group group3;
-	@FXML
-	private TextArea text;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		text1.setVisible(false);
 		group1.setVisible(false);
 		group2.setVisible(false);
 		group3.setVisible(false);
 		circle.setVisible(false);
-		text.setVisible(false);
 		state = StateSlide.UN;
 	}
 
@@ -45,7 +43,7 @@ public class AnimationTimelineController extends Controller {
 		switch (state) {
 		case UN:
 			state = StateSlide.DEUX;
-			text.setVisible(true);
+			text1.setVisible(true);
 			break;
 		case DEUX:
 			group1.setVisible(true);

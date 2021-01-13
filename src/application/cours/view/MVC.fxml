@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -12,15 +11,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.MVCSlideController">
 
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="204.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="224.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="245.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
@@ -29,16 +29,12 @@
     <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="suivant" accessibleText="Structurejfx" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Button fx:id="suivant" accessibleText="CreationFenetreFXML" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
       <Label prefHeight="53.0" prefWidth="391.0" text="JAVAFX : MVC intuitif" GridPane.columnSpan="5" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <TextArea fx:id="text" editable="false" prefHeight="200.0" prefWidth="200.0" text="&#10;&#10;&#10;&#10;L'idée du MVC est de séparé les différentes responsabilités : &#10;- le modele : qui contient les données a afficher&#10;- la vue : qui se charge d'afficher ces données à l'utilisateur&#10;- le controlleur : qui prends compte les actions de l'utilisateur sur l'interface&#10;&#10;Ce modèle de conception apporte de la clarté dans la lecture du code, on sait les taches de chaque classe plus facilement et quelqu'un d'extérieur comprendra plus facilement un code bien organisé ! &#10;" wrapText="true" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
-         <font>
-            <Font size="14.0" />
-         </font></TextArea>
       <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Petit Rappel">
@@ -80,5 +76,34 @@
             <Image url="@../../assets/MVC-Process.svg.png" />
          </image>
       </ImageView>
+      <VBox fx:id="text" prefHeight="200.0" prefWidth="100.0" spacing="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="L'idée du MVC est de séparé les différentes responsabilités :" wrappingWidth="613.45703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- le modele : qui contient les données a afficher" wrappingWidth="613.45703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- la vue : qui se charge d'afficher ces données à l'utilisateur" wrappingWidth="613.45703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- le controlleur : qui prends compte les actions de l'utilisateur sur l'interface" wrappingWidth="613.45703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ce modèle de conception apporte de la clarté dans la lecture du code, on sait les taches de chaque classe plus facilement et quelqu'un d'extérieur comprendra plus facilement un code bien organisé ! " wrappingWidth="613.45703125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
    </children>
 </GridPane>

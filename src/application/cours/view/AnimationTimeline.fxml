@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.AnimationTimelineController">
 
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="204.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="224.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="245.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
@@ -31,21 +31,12 @@
     <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Button fx:id="previous" accessibleText="AnimationSimple" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-         <GridPane.margin>
-            <Insets left="75.0" />
-         </GridPane.margin></Button>
-      <Button fx:id="next" accessibleText="StructureJFX" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+      <Button fx:id="next" accessibleText="Intro" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#changeSlide" text="Suivant" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
       <Label text="Timeline" GridPane.columnIndex="2" GridPane.halignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" GridPane.rowIndex="5">
-         <GridPane.margin>
-            <Insets left="25.0" />
-         </GridPane.margin></Button>
-      <TextArea fx:id="text" prefHeight="200.0" prefWidth="200.0" text="Les timelines sont des enchainements d'actions ou d'étapes, ces étapes sont enregistrées dans des keyframe qui seront placés dans la timeline et lue par le code une par une.&#10;Chaque timeline à ses propres propriétées (durée, répétition, evenement, etc), c'est un objet similaire à un thread.&#10;" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
       <Group fx:id="group1" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
             <Button alignment="CENTER" layoutX="760.0" layoutY="48.0" mnemonicParsing="false" onAction="#timelineCircle" text="Play" />
@@ -77,5 +68,16 @@
          </children>
       </Group>
       <Circle fx:id="circle" fill="DODGERBLUE" radius="23.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Text fx:id="text1" strokeType="OUTSIDE" strokeWidth="0.0" text="Les timelines sont des enchainements d'actions ou d'étapes, ces étapes sont enregistrées dans des keyframe qui seront placés dans la timeline et lue par le code une par une.Chaque timeline à ses propres propriétées (durée, répétition, evenement, etc), c'est un objet similaire à un thread." wrappingWidth="950.853515625" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="retour" mnemonicParsing="false" onAction="#clicRetour" prefHeight="19.0" prefWidth="52.0" text="Retour" />
+            <Button fx:id="previous" accessibleText="AnimationSimple" mnemonicParsing="false" onAction="#changeSlide" text="Précédent" />
+         </children>
+      </HBox>
    </children>
 </GridPane>

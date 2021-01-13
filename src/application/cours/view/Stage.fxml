@@ -14,11 +14,11 @@
 <GridPane alignment="CENTER" maxHeight="1920" maxWidth="1920" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#avancementSlide" prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cours.controller.StageController">
 
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="0.0" prefWidth="86.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="204.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="224.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="742.0" minWidth="10.0" prefWidth="245.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="0.0" prefWidth="81.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
