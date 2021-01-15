@@ -24,6 +24,8 @@ import javafx.stage.Stage;
 
 public class LaunchController implements Initializable, returnAction {
 
+	// liaison des Nodes avec les variables grace au fx:id
+
 	@FXML
 	private Pane configStart;
 	@FXML
@@ -45,12 +47,17 @@ public class LaunchController implements Initializable, returnAction {
 	@FXML
 	private Button retour;
 
+	// récupération des vitesses rentrer en entrée pour les utiliser plus tard
+
 	private static List<Integer> listeVitesse = new LinkedList<>();
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		MusicLauncher.music("course");
 	}
+
+	// quand on appuie pour lancer la course, on vide la liste puis on y ajoute
+	// toutes les nouvelles vitesses pour chaque future voiture
 
 	public void startCourse(ActionEvent event) {
 		listeVitesse.removeAll(listeVitesse);
@@ -61,7 +68,7 @@ public class LaunchController implements Initializable, returnAction {
 			listeVitesse.add(Integer.parseInt(vitesseV4.getText()));
 			listeVitesse.add(Integer.parseInt(vitesseV5.getText()));
 		} catch (NumberFormatException e) {
-			erreur.setText("Les vitesses doivent être des entiers non nulles");
+			erreur.setText("Les vitesses doivent être des entiers non nulles"); // gestion des erreurs
 			return;
 		}
 
@@ -70,7 +77,7 @@ public class LaunchController implements Initializable, returnAction {
 		} else {
 			Stage stage = (Stage) start.getScene().getWindow();
 			Parent root = null;
-			try {
+			try { // si tout est bon on prépare la scene suivante et on la lance
 				root = FXMLLoader.load(getClass().getResource("/application/race/view/CourseScene.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();

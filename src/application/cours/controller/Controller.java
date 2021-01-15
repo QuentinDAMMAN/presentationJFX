@@ -18,11 +18,16 @@ public abstract class Controller implements Initializable, returnAction {
 	@FXML
 	private Button previous;
 
+	// enum pour la progression des slides
+
 	protected enum StateSlide {
 		UN, DEUX, TROIS, QUATRE;
 	}
 
 	StateSlide state = StateSlide.UN;
+
+	// fonction pour imiter un powerpoint, lié au clic souris sur la surface
+	// principale de la scene (GridPane)
 
 	public abstract void avancementSlide(MouseEvent event);
 

@@ -62,11 +62,13 @@ public class AnimationTimelineController extends Controller {
 
 	public void timelineCircle(ActionEvent event) {
 
-		Timeline circleAnimation = new Timeline();
-		circleAnimation.setCycleCount(1);
+		Timeline circleAnimation = new Timeline(); // création de la timeline
+		circleAnimation.setCycleCount(1); // nombre de cycle
+		// ajout d'une frame avec sa durée (2s) et sa valeur
 		KeyFrame k = new KeyFrame(Duration.seconds(2),
-				new KeyValue(circle.translateYProperty(), circle.getTranslateY() + 300));
-		circleAnimation.getKeyFrames().add(k);
+				new KeyValue(circle.translateYProperty(), circle.getTranslateY() + 300)); // on change l'ordonnées du
+																							// cercle
+		circleAnimation.getKeyFrames().add(k); // on ajoute la frame
 		circleAnimation.play();
 
 	}
@@ -78,7 +80,8 @@ public class AnimationTimelineController extends Controller {
 		KeyFrame k = new KeyFrame(Duration.seconds(2),
 				new KeyValue(circle.translateYProperty(), circle.getTranslateY() - 300));
 		circleAnimation.getKeyFrames().add(k);
-		circleAnimation.setAutoReverse(true);
+		circleAnimation.setAutoReverse(true); // autoreverse pour refaire le chemin inverse, si plusieurs KeyFrame il
+												// les refait dans l'ordre inverse
 		circleAnimation.play();
 
 	}
@@ -86,7 +89,7 @@ public class AnimationTimelineController extends Controller {
 	public void timelineCircleBounceInfinite(ActionEvent event) {
 
 		Timeline circleAnimation = new Timeline();
-		circleAnimation.setCycleCount(Animation.INDEFINITE);
+		circleAnimation.setCycleCount(Animation.INDEFINITE); // Vers l'infini et l'au dela !
 		KeyFrame k = new KeyFrame(Duration.seconds(2),
 				new KeyValue(circle.translateYProperty(), circle.getTranslateY() - 300));
 		circleAnimation.getKeyFrames().add(k);

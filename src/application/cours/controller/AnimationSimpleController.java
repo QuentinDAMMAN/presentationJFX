@@ -59,22 +59,26 @@ public class AnimationSimpleController extends Controller {
 	}
 
 	public void rotate(ActionEvent event) {
-		RotateTransition rotationImage = new RotateTransition();
-		rotationImage.setCycleCount(1);
-		rotationImage.setNode(img1);
-		rotationImage.setByAngle(360);
-		rotationImage.setDuration(Duration.seconds(4));
-		rotationImage.play();
+		RotateTransition rotationImage = new RotateTransition(); // création de l'animation sans parametre
+		rotationImage.setCycleCount(1); // nombre de fois qu'elle se répète
+		rotationImage.setNode(img1); // node sur laquelle l'animation s'applique
+		rotationImage.setByAngle(360); // degrés de la rotation
+		rotationImage.setDuration(Duration.seconds(4)); // durée de la rotation
+		rotationImage.play(); // et on lance !
 	}
 
 	public void dual(ActionEvent event) {
-		TranslateTransition boutonTranslation = new TranslateTransition();
-		boutonTranslation.setNode(btn2);
-		boutonTranslation.setToX(-500);
-		TranslateTransition imageTranslation = new TranslateTransition();
-		imageTranslation.setNode(img2);
-		imageTranslation.setToX(500);
-		ParallelTransition dualTransition = new ParallelTransition(boutonTranslation, imageTranslation);
-		dualTransition.play();
+		TranslateTransition boutonTranslation = new TranslateTransition(); // première transition
+		boutonTranslation.setNode(btn2); // node sur laquelle l'animation s'applique
+		boutonTranslation.setToX(-500); // destination de la translation
+		TranslateTransition imageTranslation = new TranslateTransition(); // deuxième transition
+		imageTranslation.setNode(img2);// node sur laquelle l'animation s'applique
+		imageTranslation.setToX(500); // destination de la translation
+		ParallelTransition dualTransition = new ParallelTransition(boutonTranslation, imageTranslation); // on ajoute
+																											// les deux
+																											// dans une
+																											// transition
+																											// parallele
+		dualTransition.play(); // on lance tout en meme temps
 	}
 }

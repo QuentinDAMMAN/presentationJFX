@@ -15,6 +15,8 @@ import javafx.scene.control.Slider;
 
 public class SoundController implements returnAction, Initializable {
 
+	// liaison des Nodes avec les variables grace au fx:id
+
 	@FXML
 	private Button retour;
 	@FXML

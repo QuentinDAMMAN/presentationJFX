@@ -17,6 +17,8 @@ public class IntroController extends Controller {
 	@FXML
 	private Text text3;
 
+	// initialisation de la scene en cachant les éléments
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		text1.setVisible(false);
@@ -24,6 +26,9 @@ public class IntroController extends Controller {
 		text3.setVisible(false);
 		state = StateSlide.UN;
 	}
+
+	// switch qui avance à chaque clic dépendant de l'enum de la classe mère (cf
+	// Controller.java)
 
 	@Override
 	public void avancementSlide(MouseEvent event) {
