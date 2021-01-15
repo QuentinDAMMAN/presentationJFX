@@ -17,7 +17,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
 
+// Interface Initializable permet de faire une
+
 public class CourseController implements Initializable, returnAction {
+	// liaison des Nodes avec les variables grace au fx:id
+
 	@FXML
 	private ImageView voiture1;
 	@FXML
@@ -38,14 +42,17 @@ public class CourseController implements Initializable, returnAction {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		Countdown cd = new Countdown(decompte, this);
-		cd.start();
+		Countdown cd = new Countdown(decompte, this); // décompte de l'animation avec les parametre
+		cd.start(); // lancement du décompte dès le chargement de la scene
 	}
 
+	// lancement des voitures a la fin du décompte
 	public void startRace() {
 		CarAnimation carAnim = new CarAnimation();
-		ImageView[] cars = { voiture1, voiture2, voiture3, voiture4, voiture5 };
-		carAnim.play(this, cars, listeVitesse);
+		ImageView[] cars = { voiture1, voiture2, voiture3, voiture4, voiture5 }; // Array d'ImageView (node contenant
+																					// les images en JFX)
+		carAnim.play(this, cars, listeVitesse); // on passe en paramètre les voitures et leurs vitesses pour les animer
+												// en simultanés
 	}
 
 	@Override

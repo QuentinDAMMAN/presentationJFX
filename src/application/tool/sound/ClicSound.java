@@ -10,13 +10,13 @@ import javafx.stage.Stage;
 
 public class ClicSound {
 	public void exec(ImageView image) {
-		Stage stageReturn = (Stage) image.getScene().getWindow();
+		Stage stageReturn = (Stage) image.getScene().getWindow(); // récupération du Stage principal
 		Parent rootReturn = null;
-		try {
+		try { // préparationde la scene a charger dans le stage
 			rootReturn = FXMLLoader.load(getClass().getResource("/application/tool/sound/SoundScene.fxml"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		stageReturn.setScene(new Scene(rootReturn));
+		stageReturn.setScene(new Scene(rootReturn)); // affichage de la nouvelle scene
 	}
 }
